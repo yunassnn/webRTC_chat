@@ -3,11 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<!-- bootstrap messenger ui css -->
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="chat.css" rel="stylesheet" type="text/css">
-	<!-- bootstrap css -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<!-- bootstrap js -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -15,6 +10,12 @@
 	<!-- jQuery CDN -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	
+	<!-- bootstrap css -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- bootstrap messenger ui css -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="chat.css" rel="stylesheet" type="text/css">
+	 
 </head>
 <body>
 <div class="container">
@@ -25,7 +26,11 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <h5 class="title">Chat App</h5>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"> </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" style="text-align: right"> 
+        	<span>ID: </span>
+        	<input type="text" id="reciver-id" placeholder="input the id" />
+        	<button type="button" class="btn btn-primary">Connect</button>
+            </div>
         </div>
     </div>
     <!-- Page header end -->
@@ -42,83 +47,7 @@
 
                     <!-- Row start -->
                     <div class="row no-gutters">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3">
-                            <div class="users-container">
-                                <div class="chat-search-box">
-                                    <div class="input-group">
-                                        <input class="form-control" placeholder="Search">
-                                        <div class="input-group-btn">
-                                            <button type="button" class="btn btn-info">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="users">
-                                    <li class="person" data-chat="person1">
-                                        <div class="user">
-                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
-                                            <span class="status busy"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name">Steve Bangalter</span>
-                                            <span class="time">15/02/2019</span>
-                                        </p>
-                                    </li>
-                                    <li class="person" data-chat="person1">
-                                        <div class="user">
-                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar1.png" alt="Retail Admin">
-                                            <span class="status offline"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name">Steve Bangalter</span>
-                                            <span class="time">15/02/2019</span>
-                                        </p>
-                                    </li>
-                                    <li class="person active-user" data-chat="person2">
-                                        <div class="user">
-                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar2.png" alt="Retail Admin">
-                                            <span class="status away"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name">Peter Gregor</span>
-                                            <span class="time">12/02/2019</span>
-                                        </p>
-                                    </li>
-                                    <li class="person" data-chat="person3">
-                                        <div class="user">
-                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
-                                            <span class="status busy"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name">Jessica Larson</span>
-                                            <span class="time">11/02/2019</span>
-                                        </p>
-                                    </li>
-                                    <li class="person" data-chat="person4">
-                                        <div class="user">
-                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar4.png" alt="Retail Admin">
-                                            <span class="status offline"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name">Lisa Guerrero</span>
-                                            <span class="time">08/02/2019</span>
-                                        </p>
-                                    </li>
-                                    <li class="person" data-chat="person5">
-                                        <div class="user">
-                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar5.png" alt="Retail Admin">
-                                            <span class="status away"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name">Michael Jordan</span>
-                                            <span class="time">05/02/2019</span>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
+                        <div class="col-12">
                             <div class="selected-user">
                                 <span>To: <span class="name">Emily Russell</span></span>
                             </div>
@@ -188,7 +117,7 @@
                                     </li>
                                 </ul>
                                 <div class="form-group mt-3 mb-0">
-                                    <textarea class="form-control" rows="3" placeholder="Type your message here..."></textarea>
+                                    <input type="text" class="form-control" placeholder="Type your message here..."></input>
                                 </div>
                             </div>
                         </div>
