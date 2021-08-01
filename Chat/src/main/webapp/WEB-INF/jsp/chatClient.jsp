@@ -27,9 +27,7 @@
                 <h5 class="title">Chat App</h5>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" style="text-align: right"> 
-        	<span>ID: </span>
-        	<input type="text" id="receiver-id" placeholder="input the id" />
-        	<button type="button" class="btn btn-primary" id="connect-btn">Connect</button>
+        		<div id="receiver-id" style="font-weight: bold;">Client ID :: </div>
            	</div>
         </div>
         <div class="row status" id="status"></div>
@@ -72,7 +70,8 @@
 
 	<!-- peerJS start -->
 	<script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
-	<script src="chat_server.js" type="text/javascript"></script>
+	<script src="chat_client.js"></script>
+	
 	
 </body>
 </html>
