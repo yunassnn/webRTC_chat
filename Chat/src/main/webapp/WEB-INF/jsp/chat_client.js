@@ -51,7 +51,7 @@ function init() {
 	});
 	peer.on('error', function(err) {
 		alert(err);
-	})
+	});
 }
 
 function ready(){
@@ -60,7 +60,7 @@ function ready(){
 	});
 	conn.on('close', function(){
 		$('#status').html('Connection reset. Awaiting connection...');
-	})
+	});
 }
 
 function addMessage(msg, side) {

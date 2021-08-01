@@ -36,9 +36,10 @@ function init() {
 		conn = null;
 		$('#status').html('connection destroyed');
 	});
+	
 	peer.on('error', function(err) {
 		alert(err);
-	})
+	});
 }
 
 function join() {
@@ -52,7 +53,7 @@ function join() {
 	});
 
 	conn.on('data', function() {
-		addMessage(data, "left");
+		addMessage(data, "right");
 	});
 }
 
@@ -102,6 +103,7 @@ $(document).ready(function() {
 	});
 	
 	$('#sendMsgBox').keydown(function(key){
+		// Enter(13) 입력시
 		if(key.keyCode == 13){
 			if(conn && conn.open){
 				var msg = $("#sendMsgBox").val();
