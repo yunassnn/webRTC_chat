@@ -78,11 +78,11 @@ function addMessage(msg, side) {
 	// 대화내용 저장할 배열
 	var msgHtml = [];
 	
-	if (side == 'right') {
+	if (side == 'left') {
 		msgHtml.push('<li class="chat-left">');
 		msgHtml.push('<div class="chat-avatar">');
 		msgHtml.push('<img src="https://www.bootdey.com/img/Content/avatar/avatar4.png" alt="Retail Admin">');
-		msgHtml.push('<div class="chat-name">Sam</div>');
+		msgHtml.push('<div class="chat-name">Jin</div>');
 		msgHtml.push('</div>');
 		msgHtml.push('<div class="chat-text">' + msg + '</div>');
 		msgHtml.push('<div class="chat-hour">' + h + ":" + m + ":" + s + '<span class="fa fa-check-circle"></span></div>');
@@ -110,7 +110,7 @@ $(document).ready(function() {
 				var msg = $("#sendMsgBox").val();
 				$('#sendMsgBox').val('');
 				conn.send(msg);
-				add.Message(msg, "right");
+				addMessage(msg, "left");
 			} else {
 				$('#status').html('Connenction id closed');
 			}

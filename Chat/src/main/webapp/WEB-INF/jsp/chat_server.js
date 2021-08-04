@@ -53,7 +53,7 @@ function join() {
 	});
 
 	conn.on('data', function() {
-		addMessage(data, "right");
+		addMessage(data, 'left');
 	});
 }
 
@@ -79,15 +79,15 @@ function addMessage(msg, side) {
 		msgHtml.push('<div class="chat-name">Russell</div>');
 		msgHtml.push('</div>');
 		msgHtml.push('<div class="chat-text">' + msg + '</div>');
-		msgHtml.push('<div class="chat-hour">' + h + ":" + m + ":" + s + '<span class="fa fa-check-circle"></span></div>');
+		msgHtml.push('<div class="chat-hour">' + h + ':' + m + ':' + s + '<span class="fa fa-check-circle"></span></div>');
 		msgHtml.push('</li>');
 	} else {
 		msgHtml.push('<li class="chat-right">');
-		msgHtml.push('<div class="chat-hour">' + h + ":" + m + ":" + s + '<span class="fa fa-check-circle"></span></div>');
+		msgHtml.push('<div class="chat-hour">' + h + ':' + m + ':' + s + '<span class="fa fa-check-circle"></span></div>');
 		msgHtml.push('<div class="chat-text">' + msg + '</div>');
 		msgHtml.push('<div class="chat-avatar">');
 		msgHtml.push(' <img src="https://www.bootdey.com/img/Content/avatar/avatar4.png" alt="Retail Admin">');
-		msgHtml.push('<div class="chat-name">Sam</div>');
+		msgHtml.push('<div class="chat-name">Jin</div>');
 		msgHtml.push('</div>');
 		msgHtml.push('</li>');
 	}
@@ -109,7 +109,7 @@ $(document).ready(function() {
 				var msg = $("#sendMsgBox").val();
 				$('#sendMsgBox').val('');
 				conn.send(msg);
-				add.Message(msg, "left");
+				addMessage(msg, "left");
 			} else {
 				$('#status').html('Connenction id closed');
 			}
